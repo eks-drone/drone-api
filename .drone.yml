@@ -1,6 +1,6 @@
 kind: pipeline
 name: default
-
+type: docker
 steps:
 - name: build
   image: 633025986259.dkr.ecr.us-east-1.amazonaws.com/eks-kubectl-wr:latest
