@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: 633025986259.dkr.ecr.us-east-1.amazonaws.com/eks-kubectl-wr:latest
+  commands:
+  - ls
+  - aws eks --region us-east-1 update-kubeconfig --name eks-cluster
+
+image_pull_secrets:
+- dockerconfigjson
